@@ -25,7 +25,7 @@ As our data is highly imbalanced, I did not get good results after training Fast
 * I have cropped the images with the ground truth bounding box dimensions of other class(Except RBC).
 * Trained a dense net model on this cropped images,for all other classes.
 
-Testing 
+## Testing 
 * Raw image will be sent to first level classifier.
 * It predicts classes RBC and OTHER with Bounding Boxes.This results(image_name, bounding box coordinates and class label) will be saved as a CSV file.
 * In the second level, again take a raw image and crop other class cells with the predicted bounding box dimensions, finally feed to model 2. Model 2 will predict the original class label of the cell.
